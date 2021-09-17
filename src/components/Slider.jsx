@@ -4,10 +4,6 @@ import ArrowLeftOutlinedIcon from '@material-ui/icons/ArrowLeftOutlined';
 import ArrowRightOutlinedIcon from '@material-ui/icons/ArrowRightOutlined';
 import { sliderItems } from "../data.js";
 
-// import slideImage1 from '../assests/slide-img.png'
-// import slideImage2 from '../assests/slide-img2.png'
-// import slideImage3 from '../assests/slide-img3.png'
-
 const Container = styled.div`
     width: 100%;
     height: 100vh;
