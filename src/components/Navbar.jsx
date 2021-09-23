@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
 import SearchIcon from '@material-ui/icons/Search';
 import Badge from '@material-ui/core/Badge';
+import { tablet, mobile } from '../responsive';
 
 const Container = styled.div`
     height: 60px;
@@ -24,6 +25,7 @@ const Language = styled.span`
     fontSize: 14px;
     cursor: pointer;
     margin-right: 25px;
+    ${tablet({display: "none"})};
 `;
 
 const SearchContainer = styled.div`
@@ -31,6 +33,7 @@ const SearchContainer = styled.div`
     display: flex;
     align-items: center;
     padding: 5px;
+    ${mobile({display: "none"})};
 `;
 
 const Input = styled.input`
@@ -41,6 +44,7 @@ const Input = styled.input`
 const Center = styled.div`
     flex = 1;
     text-align: center;
+    ${mobile({flex: "auto", textAlign: "left"})};
 `;
 
 const Logo = styled.h1`

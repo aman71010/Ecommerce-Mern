@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar';
 import Announcement from '../components/Announcement';
 import Footer from '../components/Footer';
 import { Add, Remove } from '@material-ui/icons';
+import { tablet, mobile } from '../responsive';
 
 const Container = styled.div``;
 
@@ -19,6 +20,7 @@ const Top = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    ${mobile({flexDirection: "column", alignItems: "flex-start"})};
 `;
 
 const TopButton = styled.button`
@@ -28,10 +30,11 @@ const TopButton = styled.button`
     color: ${ (props) => props.type === "filled" && "white" };
     font-weight: 600;
     cursor: pointer;
+    ${mobile({width: "159px"})};
 `;
 
 const TopTexts = styled.div`
-    
+    ${mobile({padding: "20px 0"})};
 `;
 
 const TopText = styled.span`
@@ -39,10 +42,12 @@ const TopText = styled.span`
     margin: 0 10px;
     cursor: pointer;
     font-weight: 500;
+    ${mobile({margin: "0 20px 0 0"})};
 `;
 
 const Bottom = styled.div`
     display: flex;
+    ${mobile({flexDirection: "column"})};
 `;
 
 const Info = styled.div`
@@ -54,12 +59,14 @@ const Product = styled.div`
 `;
 
 const ProductDetail = styled.div`
-    flex: 2;
+    flex: 3;
     display: flex;
+    ${mobile({flexDirection: "column"})};
 `;
 
 const Image = styled.img`
     width: 200px;
+    ${tablet({width: "150px"})};
 `;
 
 const Details = styled.div`
@@ -67,20 +74,29 @@ const Details = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    ${tablet({padding: "10px"})};
+    ${mobile({padding: "20px 0 10px 0"})};
 `;
 
-const ProductName = styled.div``;
+const ProductName = styled.div`
+    ${mobile({marginBottom: "10px"})};
+`;
 
-const ProductId = styled.div``;
+const ProductId = styled.div`
+    ${mobile({marginBottom: "10px"})};
+`;
 
 const ProductColor = styled.div`
     width: 20px;
     height: 20px;
     border-radius: 50%;
     background-color: ${props => props.color};
+    ${mobile({marginBottom: "10px"})};
 `;
 
-const ProductSize = styled.div``;
+const ProductSize = styled.div`
+    ${mobile({marginBottom: "10px"})};
+`;
 
 const PriceDetail = styled.div`
     flex: 1;
@@ -114,9 +130,10 @@ const Hr = styled.hr`
 
 const Summary = styled.div`
     flex: 1;
-    padding: 20px;
+    padding: 16px;
+    min-width: 250px;
     border: 1px solid lightgrey;
-    height: 50vh;
+    ${tablet({flex: "2", padding: "10px", minWidth: "0"})};
 `;
 
 const SummaryTitle = styled.h1`

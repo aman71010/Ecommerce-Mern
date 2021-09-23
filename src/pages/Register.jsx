@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { tablet2, mobile2 } from '../responsive';
 
 const Container = styled.div`
     width: 100vw;
@@ -9,6 +10,7 @@ const Container = styled.div`
         ),
         url("https://images.pexels.com/photos/6984661/pexels-photo-6984661.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") 
             center;
+    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -18,16 +20,19 @@ const Wrapper = styled.div`
     width: 40%;
     background-color: white;
     padding: 20px;
+    ${tablet2({width: "60%"})};
 `;
 
 const Title = styled.h1`
     font-size: 26px;
     font-weight: 300;
+    ${mobile2({fontSize: "18px"})};
 `;
 
 const Form = styled.form`
     display: flex;
     flex-wrap: wrap;
+    ${mobile2({flexWrap: "nowrap", flexDirection: "column"})};
 `;
 
 const Input = styled.input`
@@ -35,15 +40,17 @@ const Input = styled.input`
     min-width: 40%;
     margin: 20px 10px 0 0;
     padding: 10px;
+    ${mobile2({margin: "10px 0 0 0", padding: "5px"})};
 `;
 
 const Agreement = styled.span`
     margin: 20px 0;
     font-size: 12px;
+    ${mobile2({margin: "10px 0"})};
 `;
 
 const Button = styled.button`
-    width: 40%;
+    width: 50%;
     padding: 10px 15px;
     border: none;
     background-color: #1c54b2;

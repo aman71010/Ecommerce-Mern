@@ -1,10 +1,13 @@
 import styled from 'styled-components';
 import { categories } from '../data.js';
 import CategoryItem from './CategoryItem.jsx';
+import { tablet, mobile } from '../responsive';
 
 const Container = styled.div`
     display: flex;
     padding: 5px;
+    flex-wrap: wrap;
+    ${mobile({flexDirection: "column"})};
 `;
 
 const Categories = () => {

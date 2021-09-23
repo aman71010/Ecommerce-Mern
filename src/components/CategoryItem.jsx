@@ -1,8 +1,10 @@
 import styled from 'styled-components';
+import { tablet, mobile } from '../responsive';
 
 const Container = styled.div`
     flex: 1;
-    height: 70vh;
+    min-width: 300px;
+    height: 350px;
     margin: 3px;
     position: relative;
 `;
@@ -23,6 +25,7 @@ const Image = styled.img`
     height: 100%;
     width: 100%;
     object-fit: cover;
+    ${mobile({height: "40vh"})}
 `;
 
 const Title = styled.h1`

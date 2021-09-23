@@ -1,9 +1,15 @@
 import { Facebook, Twitter, Instagram, MailOutline, Phone, Room } from '@material-ui/icons';
 import styled from 'styled-components';
-
+import { tablet, mobile } from '../responsive';
 
 const Container = styled.div`
     display: flex;
+    
+    ${tablet({flexWrap: "wrap-reverse"})};
+    ${mobile({
+        flexWrap: "none",
+        flexDirection: "column"
+    })};
 `;
 
 const Left = styled.div`
@@ -17,6 +23,7 @@ const Logo = styled.h1`
 
 const Desc = styled.p`
     margin: 20px 0;
+    ${mobile({margin: "10px 0"})};
 `;
 
 const SocialIconContainer = styled.div`
@@ -39,10 +46,17 @@ const SocialIcon = styled.div`
 const Center = styled.div`
     flex: 1;
     padding: 20px;
+    min-width: 264px;
+    ${tablet({order: "1"})};
+    ${mobile({
+        padding: "10px 20px 0 20px", 
+        order: "-1"
+    })};
 `;
 
 const Title = styled.h3`
     margin-bottom: 30px;
+    ${mobile({marginBottom: "20px"})};
 `;
 
 const List = styled.ul`
@@ -67,10 +81,12 @@ const ContactItem = styled.div`
     margin-bottom: 20px;
     display: flex;
     align-items: center;
+    ${mobile({marginBottom: "10px"})};
 `;
 
 const Payment = styled.img`
     width: 50%;
+    ${mobile({width: "60%"})};
 `;
 
 const Footer = () => {

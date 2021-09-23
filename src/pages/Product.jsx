@@ -4,29 +4,42 @@ import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import Newsletter from '../components/Newsletter';
 import { Add, Remove } from '@material-ui/icons';
+import { tablet, mobile } from '../responsive';
 
 const Container = styled.div``;
 
 const Wrapper = styled.div`
     display: flex;
-    padding: 50px;
+    margin: 40px;
     height: 80vh;
+    ${tablet({margin: "20px"})};
+    ${mobile({flexDirection: "column", height: "130vh"})};
 `;
 
 const ImgContainer = styled.div`
+    width: 0;
     flex: 1;
     display: flex;
     justify-content: center;
+    ${mobile({width: "100%", height: "50%"})};
 `;
 
 const Image = styled.img`
-    width: 100%;
+    max-width: 100%;
+    height: auto;
     object-fit: cover;
 `;
 
 const InfoContainer = styled.div`
+    width: 0;
     flex: 1;
     padding: 0 50px;
+    ${tablet({padding: "0 20px"})};
+    ${mobile({
+        width: "100%", 
+        height: "50%",
+        padding: "20px 0",
+    })};
 `;
 
 const Title = styled.h1`
@@ -46,7 +59,8 @@ const FilterContainer = styled.div`
     display: flex;
     justify-content: space-between;
     margin: 30px 0;
-    width: 50%;
+    width: 70%;
+    ${tablet({margin: "15px 0", width: "100%"})};
 `;
 
 const Filter = styled.div`
@@ -77,9 +91,10 @@ const FilterSize = styled.select`
 const FilterSizeOption = styled.option``;
 
 const AddContainer = styled.div`
-    width: 50%;
+    width: 70%;
     display: flex;
     justify-content: space-between;
+    ${tablet({width: "100%"})};
 `;
 
 const AmountContainer = styled.div`
@@ -124,8 +139,7 @@ const Product = () => {
                     <Title>Denim Jumpsuit</Title>
                     <Desc>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eu felis nibh. Maecenas vitae turpis in libero ornare finibus.
-                        Mauris ac elit iaculis ante volutpat dictum. Integer metus mauris, euismod nec pulvinar vel, posuere non justo. Praesent 
-                        lacinia porta diam non lobortis. Aliquam facilisis imperdiet elit et posuere. 
+                        Mauris ac elit iaculis ante volutpat dictum.
                     </Desc>
                     <Price>Rs. 2999</Price>
                     <FilterContainer>

@@ -4,6 +4,7 @@ import Newsletter from '../components/Newsletter.jsx';
 import Announcement from '../components/Announcement.jsx';
 import Products from '../components/Products.jsx';
 import styled from 'styled-components';
+import { tablet } from '../responsive';
 
 
 const Container = styled.div``;
@@ -19,12 +20,16 @@ const FilterContainer = styled.div`
 
 const Filter = styled.div`
     margin: 20px;
+    ${tablet({display: "flex", flexDirection: "column"})};
 `;
 
 const FilterText = styled.span`
     margin-right: 20px;
     font-size: 20px;
     font-weight: 600px;
+    ${tablet({marginRight: "0"})};
+    
+
 `;
 
 const Select = styled.select`
@@ -32,6 +37,8 @@ const Select = styled.select`
     margin-right: 20px;
     cursor: pointer;
     outline: none;
+    ${tablet({margin: "10px 0"})};
+
 `;
 
 const Option = styled.option``;
@@ -44,7 +51,6 @@ const ProductList = () => {
             <Announcement />
             <Title>Dresses</Title>
             <FilterContainer>
-
                 <Filter>
                     <FilterText>Filter Products:</FilterText>
                     <Select>

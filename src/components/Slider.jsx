@@ -3,6 +3,7 @@ import styled from "styled-components";
 import ArrowLeftOutlinedIcon from '@material-ui/icons/ArrowLeftOutlined';
 import ArrowRightOutlinedIcon from '@material-ui/icons/ArrowRightOutlined';
 import { sliderItems } from "../data.js";
+import { tablet, mobile } from '../responsive';
 
 const Container = styled.div`
     width: 100%;
@@ -39,10 +40,13 @@ const Wrapper = styled.div`
 
 const Slide = styled.div`
     width: 100vw;
-    height: 100vh;
     display: flex;
     align-items: center;
     background-color: #${props => props.bg};
+    ${mobile({
+        flexDirection: "column", 
+        alignItem: ""
+    })};
 `;
 
 const ImgContainer = styled.div`
@@ -51,20 +55,32 @@ const ImgContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    ${mobile({height: "60%", alignItem: "", justifyContent: ""})};
 `;
 
 const Image = styled.img`
     height: 80%;
+    ${mobile({height: "100%"})};
 `;
 
 const InfoContainer = styled.div`
     flex: 1;
     width: 800px;
-    padding: 50px;
+    padding: 30px;
+    ${mobile({
+        padding: "20px",
+        display: "flex",
+        flexDirection: "column",
+        alignItem: "center",
+        justifyContent: "space-between"
+    })};
+    ${tablet({width: "400px", padding: "30px"})};
 `;
 
 const Title = styled.h1`
     font-size: 70px;
+    ${mobile({textAlign: "center"})};
+    ${tablet({fontSize : "40px"})};
 `;
 
 const Description = styled.p`
@@ -72,6 +88,8 @@ const Description = styled.p`
     font-weight: 500;
     margin: 50px 0;
     letter-spacing: 3px;
+    ${mobile({margin: "18px 0", fontSize: "18px"})};
+    ${tablet({letterSpacing: "2px"})};
 `;
 
 const Button = styled.button`
@@ -79,6 +97,7 @@ const Button = styled.button`
     cursor: pointer;
     font-size: 20px;
     padding: 10px;
+    ${mobile({padding: "5px 0", fontSize: "18px"})};
 `;
 
 const Slider = () => {
