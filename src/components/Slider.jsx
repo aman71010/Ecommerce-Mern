@@ -8,8 +8,10 @@ import { tablet, mobile } from '../responsive';
 const Container = styled.div`
     width: 100%;
     height: 100vh;
+    display: flex;
     position: relative;
     overflow: hidden;
+    ${mobile({height: "120vh"})};
 `;
 
 const Arrow = styled.div`
@@ -40,56 +42,50 @@ const Wrapper = styled.div`
 
 const Slide = styled.div`
     width: 100vw;
+    height: 100vh;
     display: flex;
     align-items: center;
     background-color: #${props => props.bg};
-    ${mobile({
-        flexDirection: "column", 
-        alignItem: ""
-    })};
+    ${mobile({height: "100%", flexDirection: "column"})};
 `;
 
 const ImgContainer = styled.div`
     flex: 1;
+    width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    ${mobile({height: "60%", alignItem: "", justifyContent: ""})};
+    ${mobile({height: "50%"})};
 `;
 
 const Image = styled.img`
-    height: 80%;
-    ${mobile({height: "100%"})};
+    width: 90%;
+    height: auto;
+    ${mobile({width: "auto", height: "100%"})};
 `;
 
 const InfoContainer = styled.div`
     flex: 1;
-    width: 800px;
-    padding: 30px;
-    ${mobile({
-        padding: "20px",
-        display: "flex",
-        flexDirection: "column",
-        alignItem: "center",
-        justifyContent: "space-between"
-    })};
-    ${tablet({width: "400px", padding: "30px"})};
+    padding: 50px;
+    ${tablet({padding: "30px"})};
 `;
 
 const Title = styled.h1`
-    font-size: 70px;
-    ${mobile({textAlign: "center"})};
+    font-size: 65px;
     ${tablet({fontSize : "40px"})};
+    ${mobile({textAlign: "center"})};
+    
 `;
 
 const Description = styled.p`
     font-size: 20px;
     font-weight: 500;
-    margin: 50px 0;
+    margin: 40px 0;
     letter-spacing: 3px;
+    ${tablet({margin: "20px 0", letterSpacing: "2px"})};
     ${mobile({margin: "18px 0", fontSize: "18px"})};
-    ${tablet({letterSpacing: "2px"})};
+    
 `;
 
 const Button = styled.button`
@@ -97,7 +93,7 @@ const Button = styled.button`
     cursor: pointer;
     font-size: 20px;
     padding: 10px;
-    ${mobile({padding: "5px 0", fontSize: "18px"})};
+    ${mobile({padding: "5px", fontSize: "18px", width: "100%"})};
 `;
 
 const Slider = () => {
