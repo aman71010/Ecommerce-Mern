@@ -8,18 +8,14 @@ const router = express.Router();
 
 router.post("/register", async (req, res) => {
     try{
-        bcrypt.hash(req.body.password, 10, async (err, hash) => {
-            if(!err){
-                const newUser = new User({
-                    username: req.body.username,
-                    email: req.body.email,
-                    password: hash
-                });
-    
-                const savedUser = await newUser.save();
-                res.status(201).json(savedUser);
-            }    
-        });   
+        const hashedPassword = await bcrypt.hash(req.body.password, 12);
+        const newUser = new User({
+            username: req.body.username,
+            email: req.body.email,
+            password: hashedPassword
+        });
+        const savedUser = await newUser.save();
+        res.status(201).json(savedUser);   
     } catch(err){
         res.status(500).json(err);
     }
