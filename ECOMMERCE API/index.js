@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import userRoute from "./routes/user.js";
 import authRoute from "./routes/auth.js";
+import productRoute from "./routes/product.js";
 
 dotenv.config();
 
@@ -12,6 +13,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use("/api/users", userRoute);
 app.use("/api/auth", authRoute);
+app.use("/api/products", productRoute);
 
 const URL = process.env.MONGO_URL;
 const PORT = process.env.PORT || 8080;
