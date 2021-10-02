@@ -14,4 +14,4 @@ const cartSchema = new mongoose.Schema(
 )
 
 const Cart = new mongoose.model("Cart", cartSchema);
-export default User;
+export default Cart;
