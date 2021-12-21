@@ -9,6 +9,7 @@ import { useState, useEffect } from 'react';
 import Avatar from '@mui/material/Avatar';
 import { useHistory } from 'react-router';
 import jwt_decode from 'jwt-decode';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 
 const Container = styled.div`
     height: 60px;
@@ -71,16 +72,29 @@ const MenuItem = styled.div`
     color: black;
 `;
 
-const Button = styled.button`
-    cursor: pointer;
-    padding: 5px;
+const DropdownContent = styled.div`
+    display: none;
+    padding: 10px;
+    position: absolute;
     background-color: white;
+    z-index: 1;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    left: -20px;
+    cursor: pointer;
 `;
 
+const Dropdown = styled.div`
+    position: relative;
+    &:hover ${DropdownContent} {
+        display: flex;
+        align-items: center;
+    }
+`;
+
+const Logout = styled.span``;
 
 const Navbar = () => {
 
-    const [showDropdown, setShowDropdown] = useState(false);
     const [user, setUser] = useState(JSON.parse(localStorage.getItem("profile")));
 
     const quantity = useSelector(state => state.cart.quantity);
@@ -117,20 +131,16 @@ const Navbar = () => {
                 </Center>
                 <Right>
                     {user ? ( 
-                        <>
+                        <Dropdown>
                             <Avatar 
                                 style={{cursor: "pointer"}}
                                 children={`${user.name.split(' ')[0][0]}${user.name.split(' ')[1][0]}`}
-                                onClick={ () => setShowDropdown( !showDropdown )}
                             />
-                            <Button 
-                                style={{display: showDropdown? "":"none"}}
-                                onClick={logout}
-                            >
-                            logout
-                            </Button>
-                            
-                        </>
+                            <DropdownContent onClick={()=>{logout()}}> 
+                                <ExitToAppIcon style={{paddingRight: "5px"}}/>
+                                <Logout>Logout</Logout>                             
+                            </DropdownContent>                    
+                        </Dropdown>
                     ): (
                         <>
                             <Link style={{textDecoration: "none"}} to="/register">
