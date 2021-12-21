@@ -114,11 +114,11 @@ const Register = () => {
             }
         };
         register();
-    }, [formErrors, isSubmit]);
+    });
 
     const validate = (values) => {
         const errors = {};
-        const regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        const regex = /^\w+([-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/;
         if(!values.firstName){
             errors.firstName = "First Name is required";
         }
