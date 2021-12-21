@@ -2,7 +2,9 @@ import express from "express";
 import Stripe from "stripe";
 
 const router = express.Router();
-const stripe = new Stripe(process.env.STRIPE_KEY);
+const KEY = process.env.STRIPE_KEY;
+console.log(KEY, "key_secret");
+const stripe = new Stripe(KEY);
 
 router.post("/payment", async (req, res) => {
     console.log("partStripe1");
@@ -11,12 +13,14 @@ router.post("/payment", async (req, res) => {
     stripe.charges.create(
         {
             source: req.body.tokenId,
+            description:"shopping charges",
             amount: req.body.amount,
-            currency: "usd"
+            currency: "inr"
         },
         (stripeErr, stripeRes) => {
             if(stripeErr){
                 console.log("thisError");
+                console.log(stripeErr)
                 res.status(500).json(stripeErr);
             } else {
                 console.log("partStipe 2");

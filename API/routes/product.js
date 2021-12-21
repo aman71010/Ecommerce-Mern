@@ -76,7 +76,7 @@ router.get("/", async (req, res) => {
 
         res.status(200).json(products);
     } catch{
-        res.status(500).json(err);
+        res.status(500).json(error);
     }
 });
 
