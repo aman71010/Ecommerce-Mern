@@ -1,24 +1,24 @@
 export const sliderItems = [
     {
       id: 1,
-      img: "https://i.ibb.co/XsdmR2c/1.png",
+      img: "https://i.ibb.co/6tC8TtL/happy-man-looking-surprised-shopping-bags-buying-souvenirs-vacation-standing-yellow-background.png",
       title: "SUMMER SALE",
       desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
-      bg: "f5fafd",
+      bg: "ffef62",
     },
     {
       id: 2,
-      img: "https://i.ibb.co/cXFnLLV/3.png",
+      img: "https://i.ibb.co/fX5jf08/positive-woman-red-beret-trendy-blouse-smiles-holds-bags-from-clothing-stores.png",
       title: "LOUNGEWEAR LOVE",
       desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
-      bg: "fbf0f4",
+      bg: "FF786B",
     },
     {
         id: 3,
-        img: "https://i.ibb.co/DG69bQ4/2.png",
+        img: "https://i.ibb.co/HHLqSmc/young-attractive-dark-haired-woman-with-short-haircut-with-lot-shopping-bags.png",
         title: "AUTUMN SALE",
         desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
-        bg: "fcf1ed",
+        bg: "4aedc4",
       },
   ];
 
