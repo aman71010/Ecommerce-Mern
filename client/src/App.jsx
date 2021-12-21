@@ -4,13 +4,10 @@ import Product from './pages/Product';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Cart from './pages/Cart';
-import Pay from './pages/Pay';
 import Success from './pages/Success';
-import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 const App = () => {
-  const user = true;
-  
   return (
     <Router>
       <Switch>
@@ -26,17 +23,14 @@ const App = () => {
         <Route path="/cart"> 
           <Cart /> 
         </Route>
-        <Route path="/pay"> 
-          <Pay /> 
-        </Route>
         <Route path="/Success"> 
           <Success />
         </Route>
         <Route path="/login"> 
-          { user ? <Redirect to="/" /> : <Login /> }
+          <Login />
         </Route>
         <Route path="/register"> 
-          { user ? <Redirect to="/" /> : <Register /> }
+          <Register />
         </Route>
       </Switch>
     </Router>
