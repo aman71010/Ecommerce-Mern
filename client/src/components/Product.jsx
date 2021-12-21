@@ -75,7 +75,7 @@ const Product = ({item}) => {
             <Info>
                 <Icon>
                     <Link to={ `/product/${item._id}` }>
-                    <SearchIcon />
+                        <SearchIcon style={{color: "black"}}/>
                     </Link>
                 </Icon>
                 <Icon>
