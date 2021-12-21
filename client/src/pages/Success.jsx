@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 
 const Container = styled.div`
@@ -26,7 +27,9 @@ const Success = () => {
     return (
         <Container>
             <Title>Success</Title>
-            <Button>Go to Home Page</Button>
+            <Link to="/">
+                <Button>Go to Home Page</Button>
+            </Link>
         </Container>
     )
 }
