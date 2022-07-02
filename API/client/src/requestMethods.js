@@ -1,6 +1,8 @@
 import axios from "axios";
 
-const BASE_URL = "http://localhost:8080/api"
+//export const BASE_URL = "http://localhost:8080/api";
+export const BASE_URL = "https://e-shopmernapp.herokuapp.com/api";
+
 const TOKEN = JSON.parse(localStorage.getItem("profile"))?.accessToken;
 
 export const publicRequest = axios.create({
