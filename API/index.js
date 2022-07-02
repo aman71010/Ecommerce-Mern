@@ -26,9 +26,13 @@ app.use("/api/checkout", stripeRoute);
 const URL = process.env.MONGO_URL;
 const PORT = process.env.PORT || 8080;
 
+if(process.env.NODE_ENV == "production"){
+  app.use(express.static("client/build"));
+}
+
 mongoose.connect(URL).then(()=>{
     app.listen(PORT, ()=>{
-        console.log("Backend server is running successfully");
+        console.log("Backend server is running successfully on");
         console.log("DB connection successfully");
     });
 }).catch((err)=>{console.log(err)});
