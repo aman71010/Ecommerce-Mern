@@ -15,7 +15,7 @@ export const sliderItems = [
     },
     {
         id: 3,
-        img: "https://i.ibb.co/HHLqSmc/young-attractive-dark-haired-woman-with-short-haircut-with-lot-shopping-bags.png",
+        img: "https://i.ibb.co/8r6dQ9v/full-length-portrait-excited-family.png",
         title: "AUTUMN SALE",
         desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
         bg: "4aedc4",
@@ -26,20 +26,20 @@ export const sliderItems = [
 export const categories = [
     {
         id: 1,
-        img: "https://images.pexels.com/photos/5886041/pexels-photo-5886041.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-        title: "SHIRT STYLE!",
+        img: "https://i.ibb.co/nfGc8Sz/young-beautiful-blonde-woman-jacket-blue-wall-with-mobile-phone-doing-online-shopping-496169-1447.webp",
+        title: "WOMENS SECTION",
         cat: "women"
     },
     {
         id: 2,
-        img: "https://images.pexels.com/photos/2983464/pexels-photo-2983464.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-        title: "LOUNGEWEAR LOVE",
+        img: "https://i.ibb.co/yfv3rxv/modern-man-with-sunglasses-city.jpg",
+        title: "LIGHT JACKETS",
         cat: "coats"
     },
     {
         id: 3,
-        img: "https://images.pexels.com/photos/5480696/pexels-photo-5480696.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-        title: "LIGHT JACKETS",
+        img: "https://i.ibb.co/18jyrsG/bunch-jeans-twisted-wooden-wall-fashionable-clothes-169016-5203.jpg",
+        title: "JEANS STYLE",
         cat: "jeans"
     }
 ];
