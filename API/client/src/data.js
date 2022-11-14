@@ -26,7 +26,7 @@ export const sliderItems = [
 export const categories = [
     {
         id: 1,
-        img: "https://i.ibb.co/nfGc8Sz/young-beautiful-blonde-woman-jacket-blue-wall-with-mobile-phone-doing-online-shopping-496169-1447.webp",
+        img: "https://i.ibb.co/k0786FQ/young-beautiful-blonde-woman-jacket-blue-wall-with-mobile-phone-doing-online-shopping-496169-1447.webp",
         title: "WOMENS SECTION",
         cat: "women"
     },
@@ -39,7 +39,7 @@ export const categories = [
     {
         id: 3,
         img: "https://i.ibb.co/18jyrsG/bunch-jeans-twisted-wooden-wall-fashionable-clothes-169016-5203.jpg",
-        title: "JEANS STYLE",
+        title: "JEANS",
         cat: "jeans"
     }
 ];

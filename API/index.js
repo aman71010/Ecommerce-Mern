@@ -32,7 +32,7 @@ if(process.env.NODE_ENV == "production"){
 
 mongoose.connect(URL).then(()=>{
     app.listen(PORT, ()=>{
-        console.log(`Backend server is running successfully on ${PORT}`);
+        console.log("Backend server is running successfully on");
         console.log("DB connection successfully");
     });
 }).catch((err)=>{console.log(err)});
