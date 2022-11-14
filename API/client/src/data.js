@@ -1,14 +1,14 @@
 export const sliderItems = [
     {
       id: 1,
-      img: "https://i.ibb.co/6tC8TtL/happy-man-looking-surprised-shopping-bags-buying-souvenirs-vacation-standing-yellow-background.png",
+      img: "https://i.ibb.co/pKFQMK5/happy-man-looking-surprised-shopping-bags-buying-souvenirs-vacation-standing-yellow-background.png",
       title: "SUMMER SALE",
       desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
       bg: "ffef62",
     },
     {
       id: 2,
-      img: "https://i.ibb.co/fX5jf08/positive-woman-red-beret-trendy-blouse-smiles-holds-bags-from-clothing-stores.png",
+      img: "https://i.ibb.co/TwS96hK/positive-woman-red-beret-trendy-blouse-smiles-holds-bags-from-clothing-stores.png",
       title: "LOUNGEWEAR LOVE",
       desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
       bg: "FF786B",
