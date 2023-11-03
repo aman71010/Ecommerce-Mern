@@ -11,7 +11,8 @@ import { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import { userRequest } from '../requestMethods';
 
-const KEY = process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY;   
+//const KEY = process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY;   
+const KEY = 'pk_test_51JgUZLSJFv2mTZc1JYobQQT8vjYpCaA2r5XHErxp405luuOPCimlIfOiKtUE1McrWjn5VyuZNt9d3e6xH6UDx9EM00OFhfdPIL';
 
 const Container = styled.div``;
 

@@ -8,10 +8,12 @@ import productRoute from "./routes/product.js";
 import cartRoute from "./routes/cart.js";
 import orderRoute from "./routes/order.js";
 import stripeRoute from "./routes/stripe.js";
+import path from "path";
 
 dotenv.config();
 
 const app =  express();
+const __dirname = path.resolve();
 
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
@@ -26,13 +28,21 @@ app.use("/api/checkout", stripeRoute);
 const URL = process.env.MONGO_URL;
 const PORT = process.env.PORT || 8080;
 
-if(process.env.NODE_ENV == "production"){
-  app.use(express.static("client/build"));
-}
+// if(process.env.NODE_ENV == "production"){
+//   app.use(express.static("client/build"));
+// }
+
+app.use(express.static(path.join(__dirname, "./client/build")));
+
+app.get('*', (_, res) => {
+  res.sendFile(path.join(__dirname, "./client/build/index.html"), (err) => {
+    res.status(500).send(err);
+  })
+})
 
 mongoose.connect(URL).then(()=>{
     app.listen(PORT, ()=>{
-        console.log("Backend server is running successfully on");
+        console.log("Backend server is running successfully on " + PORT);
         console.log("DB connection successfully");
     });
 }).catch((err)=>{console.log(err)});
